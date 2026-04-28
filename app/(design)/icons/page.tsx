@@ -53,7 +53,7 @@ export default function IconsPage() {
             </span>
           </h1>
           <p style={{ fontSize: 14, color: PALETTE.inkDim, lineHeight: 1.8, maxWidth: 640, margin: 0 }}>
-            マスコットと同じ流儀で {ALL.length} 種類。6つのカテゴリ（はいしん・おしゃべり・おうち・たべもの・てんき・UI）。
+            マスコットと同じ流儀で {ALL.length} 種類。8つのカテゴリ（はいしん・おしゃべり・おうち・たべもの・てんき・UI・さむらい・せんそう）。
           </p>
         </div>
       </header>

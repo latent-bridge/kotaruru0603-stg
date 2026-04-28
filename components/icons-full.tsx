@@ -681,6 +681,362 @@ export function IconBalloon({ size = 60, accent = PALETTE.coral }: IconProps) {
   );
 }
 
+/* ============== さむらい ============== */
+
+const KHAKI = "#9ba98a";
+const STEEL = "#c8c4bc";
+
+export function IconKabuto({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 18 30 Q 18 14 40 12 Q 62 14 62 30 L 62 44 Q 70 46 72 56 L 64 64 L 16 64 L 8 56 Q 10 46 18 44 Z"
+            fill={accent} stroke={INK} strokeWidth="2.4" strokeLinejoin="round" />
+      <path d="M 18 44 Q 10 46 8 56 L 16 64 L 64 64 L 72 56 Q 70 46 62 44 L 62 48 Q 50 50 40 50 Q 30 50 18 48 Z"
+            fill={PALETTE.cream} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <path d="M 12 54 L 68 54 M 14 60 L 66 60" stroke={INK} strokeWidth="0.9" opacity="0.5" fill="none" />
+      <path d="M 18 44 Q 40 50 62 44 Q 58 38 40 38 Q 22 38 18 44 Z"
+            fill="#5a463e" stroke={INK} strokeWidth="1.4" strokeLinejoin="round" />
+      <path d="M 22 39 Q 40 36 58 39" fill="none" stroke={PALETTE.cream} strokeWidth="0.8" opacity="0.6" strokeLinecap="round" />
+      <path d="M 30 14 Q 28 28 26 42 M 40 12 L 40 42 M 50 14 Q 52 28 54 42"
+            stroke={INK} strokeWidth="0.9" opacity="0.5" fill="none" />
+      <circle cx="40" cy="14" r="2" fill={PALETTE.cream} stroke={INK} strokeWidth="1.2" />
+      <g transform="translate(40 18)">
+        <rect x="-2" y="-1" width="4" height="3" fill={INK} />
+        <path d="M -14 -8 Q -14 14 0 14 Q 14 14 14 -8 Q 8 6 0 6 Q -8 6 -14 -8 Z"
+              fill={PALETTE.cream} stroke={INK} strokeWidth="1.8" strokeLinejoin="round" />
+      </g>
+    </svg>
+  );
+}
+
+export function IconKatana({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <g transform="rotate(-45 40 40)">
+        <rect x="8" y="37" width="20" height="6" rx="1.2" fill={accent} stroke={INK} strokeWidth="2" />
+        <rect x="26" y="36.5" width="2.5" height="7" fill={PALETTE.cream} stroke={INK} strokeWidth="1.2" />
+        <g stroke={INK} strokeWidth="1" strokeLinecap="round" fill="none">
+          {[10, 14, 18, 22].map((x) => (
+            <g key={x}>
+              <line x1={x} y1="37" x2={x + 4} y2="43" />
+              <line x1={x} y1="43" x2={x + 4} y2="37" />
+            </g>
+          ))}
+        </g>
+        <rect x="6" y="36" width="3" height="8" rx="1" fill={INK} />
+        <circle cx="32" cy="40" r="7.5" fill={PALETTE.cream} stroke={INK} strokeWidth="2" />
+        <circle cx="32" cy="33.5" r="0.9" fill={INK} />
+        <circle cx="32" cy="46.5" r="0.9" fill={INK} />
+        <path d="M 32 37 L 84 37 L 84 40 L 80 43 L 32 43 Z"
+              fill="#fff" stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+        <line x1="80" y1="37" x2="80" y2="43" stroke={INK} strokeWidth="0.9" opacity="0.6" />
+        <path d="M 34 41.7 Q 36 40.7 38 41.7 Q 40 42.5 42 41.7 Q 44 40.7 46 41.7 Q 48 42.5 50 41.7 Q 52 40.7 54 41.7 Q 56 42.5 58 41.7 Q 60 40.7 62 41.7 Q 64 42.5 66 41.7 Q 68 40.7 70 41.7 Q 72 42.5 74 41.7 Q 76 40.9 79 41.7"
+              fill="none" stroke="#8a8a8a" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M 32 38 L 80 38" fill="none" stroke={INK} strokeWidth="0.5" opacity="0.4" />
+      </g>
+    </svg>
+  );
+}
+
+export function IconShuriken({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 40 8 L 46 34 L 72 40 L 46 46 L 40 72 L 34 46 L 8 40 L 34 34 Z"
+            fill={accent} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <circle cx="40" cy="40" r="5" fill={PALETTE.cream} stroke={INK} strokeWidth="1.8" />
+      <circle cx="40" cy="40" r="1.6" fill={INK} />
+    </svg>
+  );
+}
+
+export function IconSensu({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 40 60 L 14 28 Q 40 8 66 28 Z" fill="#fff" stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <path d="M 40 60 L 24 30" stroke={INK} strokeWidth="1.4" />
+      <path d="M 40 60 L 33 24" stroke={INK} strokeWidth="1.4" />
+      <path d="M 40 60 L 40 22" stroke={INK} strokeWidth="1.4" />
+      <path d="M 40 60 L 47 24" stroke={INK} strokeWidth="1.4" />
+      <path d="M 40 60 L 56 30" stroke={INK} strokeWidth="1.4" />
+      <circle cx="40" cy="32" r="6" fill={accent} />
+      <circle cx="40" cy="60" r="3" fill={INK} />
+      <path d="M 40 63 L 38 72 M 40 63 L 42 72" stroke={accent} strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function IconMon({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <circle cx="40" cy="40" r="28" fill={PALETTE.cream} stroke={INK} strokeWidth="2.2" />
+      {[0, 120, 240].map((rot) => (
+        <ellipse key={rot} cx="40" cy="26" rx="6" ry="10"
+                 fill={accent} stroke={INK} strokeWidth="1.8"
+                 transform={`rotate(${rot} 40 40)`} />
+      ))}
+      <circle cx="40" cy="40" r="3" fill="#fff" stroke={INK} strokeWidth="1.4" />
+    </svg>
+  );
+}
+
+export function IconYumi({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 42 6 Q 56 24 56 40 Q 56 56 42 74"
+            fill="none" stroke={INK} strokeWidth="3.4" strokeLinecap="round" />
+      <path d="M 42 6 Q 56 24 56 40 Q 56 56 42 74"
+            fill="none" stroke={accent} strokeWidth="1.4" strokeLinecap="round" />
+      <rect x="53.5" y="46" width="4" height="10" fill={INK} rx="0.6" />
+      <path d="M 42 6 L 26 40 L 42 74" stroke={INK} strokeWidth="1.1" fill="none" />
+      <line x1="26" y1="40" x2="74" y2="40" stroke={INK} strokeWidth="2.2" strokeLinecap="round" />
+      <line x1="26" y1="40" x2="74" y2="40" stroke={PALETTE.cream} strokeWidth="1" />
+      <path d="M 70 35 L 78 40 L 70 45 Z" fill={accent} stroke={INK} strokeWidth="1.4" strokeLinejoin="round" />
+      <path d="M 26 40 L 18 35 L 30 38 Z" fill={accent} stroke={INK} strokeWidth="1.2" strokeLinejoin="round" />
+      <path d="M 26 40 L 18 45 L 30 42 Z" fill={accent} stroke={INK} strokeWidth="1.2" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconCastle({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 10 68 L 14 56 L 66 56 L 70 68 Z" fill={STEEL} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <rect x="20" y="42" width="40" height="14" fill="#fff" stroke={INK} strokeWidth="2" />
+      <path d="M 16 44 Q 40 38 64 44" fill={accent} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <rect x="28" y="26" width="24" height="14" fill="#fff" stroke={INK} strokeWidth="2" />
+      <path d="M 24 28 Q 40 18 56 28" fill={accent} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M 38 18 Q 36 14 40 12 Q 44 14 42 18" fill={PALETTE.cream} stroke={INK} strokeWidth="1.4" strokeLinejoin="round" />
+      <rect x="36" y="30" width="8" height="6" fill={INK} />
+      <rect x="26" y="46" width="6" height="6" fill={INK} />
+      <rect x="48" y="46" width="6" height="6" fill={INK} />
+    </svg>
+  );
+}
+
+export function IconHinawa({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 12 46 L 36 42 L 36 52 L 18 60 Q 12 60 12 54 Z"
+            fill={accent} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <rect x="34" y="40" width="36" height="6" fill="#fff" stroke={INK} strokeWidth="2" />
+      <rect x="68" y="38" width="3" height="10" fill={INK} />
+      <rect x="34" y="46" width="6" height="6" fill={PALETTE.cream} stroke={INK} strokeWidth="1.6" />
+      <path d="M 40 40 Q 38 32 44 30" {..._stroke({ strokeWidth: 1.8 })} />
+      <circle cx="44" cy="30" r="1.6" fill={PALETTE.coral} />
+      <path d="M 32 52 L 32 56" stroke={INK} strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function IconTaiko({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 20 30 Q 14 44 20 58 L 60 58 Q 66 44 60 30 Z"
+            fill={accent} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <ellipse cx="40" cy="30" rx="20" ry="3.5" fill={PALETTE.cream} stroke={INK} strokeWidth="2" />
+      <path d="M 20 58 Q 40 62 60 58" fill="none" stroke={INK} strokeWidth="1.4" />
+      {[26, 32, 38, 44, 50, 56].map((x) => (
+        <circle key={x} cx={x} cy="35.5" r="1.1" fill={INK} />
+      ))}
+      <path d="M 17 44 Q 40 47 63 44" fill="none" stroke={INK} strokeWidth="1.2" opacity="0.55" />
+      <line x1="26" y1="58" x2="20" y2="72" stroke={INK} strokeWidth="2.2" strokeLinecap="round" />
+      <line x1="54" y1="58" x2="60" y2="72" stroke={INK} strokeWidth="2.2" strokeLinecap="round" />
+      <line x1="6" y1="6" x2="32" y2="26" stroke={INK} strokeWidth="2.4" strokeLinecap="round" />
+      <line x1="74" y1="6" x2="48" y2="26" stroke={INK} strokeWidth="2.4" strokeLinecap="round" />
+      <circle cx="32" cy="26" r="2" fill="#fff" stroke={INK} strokeWidth="1.4" />
+      <circle cx="48" cy="26" r="2" fill="#fff" stroke={INK} strokeWidth="1.4" />
+    </svg>
+  );
+}
+
+export function IconNobori({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <line x1="22" y1="8" x2="22" y2="74" stroke={INK} strokeWidth="2.4" strokeLinecap="round" />
+      <circle cx="22" cy="8" r="2" fill={PALETTE.cream} stroke={INK} strokeWidth="1.4" />
+      <line x1="22" y1="14" x2="58" y2="14" stroke={INK} strokeWidth="2" strokeLinecap="round" />
+      <rect x="26" y="14" width="32" height="48" fill="#fff" stroke={INK} strokeWidth="2.2" />
+      <circle cx="42" cy="28" r="6" fill={accent} stroke={INK} strokeWidth="1.6" />
+      <path d="M 36 42 L 48 42 M 42 42 L 42 56 M 36 50 L 48 50" {..._stroke({ strokeWidth: 1.6 })} />
+    </svg>
+  );
+}
+
+/* ============== せんそう（近代） ============== */
+
+export function IconTank({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <rect x="8" y="50" width="62" height="14" rx="6" fill={INK} />
+      {[16, 26, 36, 46, 56, 66].map((x) => (
+        <circle key={x} cx={x} cy="57" r="3" fill={STEEL} stroke={INK} strokeWidth="1.2" />
+      ))}
+      <rect x="14" y="38" width="50" height="14" fill={KHAKI} stroke={INK} strokeWidth="2" />
+      <rect x="26" y="26" width="22" height="14" rx="2" fill={KHAKI} stroke={INK} strokeWidth="2" />
+      <circle cx="34" cy="29" r="1.5" fill={INK} />
+      <rect x="46" y="30" width="22" height="4" fill={KHAKI} stroke={INK} strokeWidth="1.6" />
+      <rect x="66" y="28" width="3" height="8" fill={INK} />
+      <path d="M 38 47 L 39.4 49.8 L 42.3 50.2 L 40.2 52.2 L 40.7 55 L 38 53.8 L 35.3 55 L 35.8 52.2 L 33.7 50.2 L 36.6 49.8 Z"
+            fill={accent} stroke={INK} strokeWidth="0.8" />
+    </svg>
+  );
+}
+
+export function IconJet({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 40 36 L 14 50 L 14 56 L 40 50 L 66 56 L 66 50 Z"
+            fill={STEEL} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M 36 12 Q 40 8 44 12 L 46 60 Q 46 66 40 68 Q 34 66 34 60 Z"
+            fill={KHAKI} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <path d="M 36 18 Q 40 14 44 18 L 44 30 L 36 30 Z"
+            fill={accent} stroke={INK} strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M 38 60 L 40 70 L 42 60 Z" fill={STEEL} stroke={INK} strokeWidth="1.6" strokeLinejoin="round" />
+      <circle cx="22" cy="52" r="2" fill={accent} stroke={INK} strokeWidth="0.8" />
+      <circle cx="58" cy="52" r="2" fill={accent} stroke={INK} strokeWidth="0.8" />
+    </svg>
+  );
+}
+
+export function IconMissile({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 30 14 Q 40 4 50 14 L 50 56 L 30 56 Z"
+            fill="#fff" stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <rect x="30" y="22" width="20" height="3" fill={accent} />
+      <line x1="30" y1="36" x2="50" y2="36" stroke={INK} strokeWidth="1.2" />
+      <line x1="30" y1="44" x2="50" y2="44" stroke={INK} strokeWidth="1.2" />
+      <path d="M 30 50 L 22 64 L 30 60 Z" fill={KHAKI} stroke={INK} strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M 50 50 L 58 64 L 50 60 Z" fill={KHAKI} stroke={INK} strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M 36 56 L 36 66 L 44 66 L 44 56 Z" fill={KHAKI} stroke={INK} strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M 36 66 Q 38 72 40 70 Q 42 72 44 66 Q 40 76 36 66 Z"
+            fill={accent} stroke={INK} strokeWidth="1.4" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconHelmet({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 14 50 Q 14 22 40 22 Q 66 22 66 50 Z"
+            fill={KHAKI} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <path d="M 10 50 L 70 50 L 64 56 L 16 56 Z"
+            fill={KHAKI} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M 22 54 Q 24 64 32 64 L 48 64 Q 56 64 58 54" {..._stroke({ strokeWidth: 1.6 })} />
+      <rect x="36" y="62" width="8" height="4" fill={PALETTE.cream} stroke={INK} strokeWidth="1.4" />
+      <line x1="14" y1="46" x2="66" y2="46" stroke={INK} strokeWidth="1.2" opacity="0.4" />
+      <path d="M 40 32 L 41.4 35 L 44.6 35.4 L 42.3 37.6 L 42.9 40.8 L 40 39.3 L 37.1 40.8 L 37.7 37.6 L 35.4 35.4 L 38.6 35 Z"
+            fill={accent} stroke={INK} strokeWidth="0.8" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconGasmask({ size = 60 }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 18 26 Q 18 18 40 16 Q 62 18 62 26 L 60 52 Q 58 60 50 62 Q 50 70 40 70 Q 30 70 30 62 Q 22 60 20 52 Z"
+            fill={KHAKI} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <circle cx="30" cy="34" r="6" fill="#fff" stroke={INK} strokeWidth="1.8" />
+      <circle cx="50" cy="34" r="6" fill="#fff" stroke={INK} strokeWidth="1.8" />
+      <circle cx="30" cy="34" r="2" fill={INK} />
+      <circle cx="50" cy="34" r="2" fill={INK} />
+      <rect x="32" y="50" width="16" height="14" rx="2" fill={STEEL} stroke={INK} strokeWidth="1.8" />
+      <line x1="34" y1="54" x2="46" y2="54" stroke={INK} strokeWidth="1" />
+      <line x1="34" y1="58" x2="46" y2="58" stroke={INK} strokeWidth="1" />
+      <circle cx="20" cy="30" r="1.5" fill={INK} />
+      <circle cx="60" cy="30" r="1.5" fill={INK} />
+    </svg>
+  );
+}
+
+export function IconGrenade({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <ellipse cx="40" cy="50" rx="16" ry="20" fill={KHAKI} stroke={INK} strokeWidth="2.2" />
+      <path d="M 26 38 L 54 38 M 26 46 L 54 46 M 26 54 L 54 54 M 26 62 L 54 62"
+            stroke={INK} strokeWidth="1" opacity="0.7" />
+      <path d="M 32 32 L 32 68 M 40 30 L 40 70 M 48 32 L 48 68"
+            stroke={INK} strokeWidth="1" opacity="0.7" />
+      <rect x="34" y="22" width="12" height="10" fill={STEEL} stroke={INK} strokeWidth="2" />
+      <path d="M 46 24 L 60 22 L 60 30" {..._stroke({ strokeWidth: 2 })} />
+      <circle cx="62" cy="14" r="4" fill="none" stroke={accent} strokeWidth="2.2" />
+      <line x1="58" y1="16" x2="46" y2="24" stroke={INK} strokeWidth="1.4" />
+    </svg>
+  );
+}
+
+export function IconBoom({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 40 8 L 46 22 L 60 14 L 56 30 L 72 32 L 60 42 L 70 56 L 54 54 L 50 70 L 40 60 L 30 70 L 26 54 L 10 56 L 20 42 L 8 32 L 24 30 L 20 14 L 34 22 Z"
+            fill={accent} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <path d="M 40 24 L 44 32 L 52 30 L 48 38 L 56 42 L 48 44 L 50 52 L 42 48 L 40 56 L 38 48 L 30 52 L 32 44 L 24 42 L 32 38 L 28 30 L 36 32 Z"
+            fill={PALETTE.cream} stroke={INK} strokeWidth="1.6" strokeLinejoin="round" />
+      <circle cx="40" cy="40" r="3" fill="#fff" stroke={INK} strokeWidth="1.2" />
+    </svg>
+  );
+}
+
+export function IconBarbed({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 8 40 Q 16 30 24 40 Q 32 50 40 40 Q 48 30 56 40 Q 64 50 72 40" {..._stroke({ strokeWidth: 2.4 })} />
+      <path d="M 8 40 Q 16 50 24 40 Q 32 30 40 40 Q 48 50 56 40 Q 64 30 72 40" {..._stroke({ strokeWidth: 2.4 })} />
+      {[16, 32, 48, 64].map((x) => (
+        <g key={x}>
+          <line x1={x} y1="40" x2={x - 6} y2="32" stroke={INK} strokeWidth="1.8" strokeLinecap="round" />
+          <line x1={x} y1="40" x2={x + 6} y2="48" stroke={INK} strokeWidth="1.8" strokeLinecap="round" />
+          <line x1={x} y1="40" x2={x - 6} y2="48" stroke={INK} strokeWidth="1.8" strokeLinecap="round" />
+          <line x1={x} y1="40" x2={x + 6} y2="32" stroke={INK} strokeWidth="1.8" strokeLinecap="round" />
+        </g>
+      ))}
+      {[16, 32, 48, 64].map((x) => (
+        <circle key={`b${x}`} cx={x} cy="40" r="1.6" fill={accent} stroke={INK} strokeWidth="0.8" />
+      ))}
+    </svg>
+  );
+}
+
+export function IconRadio({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <rect x="14" y="22" width="44" height="44" rx="3" fill={KHAKI} stroke={INK} strokeWidth="2.2" />
+      <circle cx="26" cy="36" r="6" fill={PALETTE.cream} stroke={INK} strokeWidth="1.6" />
+      <line x1="26" y1="36" x2="29" y2="33" stroke={INK} strokeWidth="1.6" strokeLinecap="round" />
+      <rect x="36" y="30" width="18" height="14" fill="#fff" stroke={INK} strokeWidth="1.6" />
+      <line x1="38" y1="34" x2="52" y2="34" stroke={INK} strokeWidth="1" />
+      <line x1="38" y1="38" x2="52" y2="38" stroke={INK} strokeWidth="1" />
+      <line x1="38" y1="42" x2="52" y2="42" stroke={INK} strokeWidth="1" />
+      <circle cx="22" cy="56" r="2.4" fill={INK} />
+      <circle cx="32" cy="56" r="2.4" fill={INK} />
+      <rect x="40" y="52" width="14" height="8" rx="1" fill={PALETTE.cream} stroke={INK} strokeWidth="1.4" />
+      <line x1="60" y1="22" x2="68" y2="6" stroke={INK} strokeWidth="2.2" strokeLinecap="round" />
+      <circle cx="68" cy="6" r="1.6" fill={accent} stroke={INK} strokeWidth="0.8" />
+      <path d="M 70 12 Q 74 16 72 22" {..._stroke({ strokeWidth: 1.2, opacity: 0.7 })} />
+    </svg>
+  );
+}
+
+export function IconMG({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <line x1="40" y1="50" x2="20" y2="70" stroke={INK} strokeWidth="2.4" strokeLinecap="round" />
+      <line x1="40" y1="50" x2="60" y2="70" stroke={INK} strokeWidth="2.4" strokeLinecap="round" />
+      <line x1="40" y1="50" x2="40" y2="70" stroke={INK} strokeWidth="2.4" strokeLinecap="round" />
+      <rect x="16" y="38" width="34" height="12" rx="1.5" fill={KHAKI} stroke={INK} strokeWidth="2" />
+      <rect x="50" y="40" width="22" height="8" fill={STEEL} stroke={INK} strokeWidth="1.8" />
+      {[54, 58, 62, 66].map((x) => (
+        <circle key={x} cx={x} cy="44" r="1.2" fill={INK} />
+      ))}
+      <rect x="71" y="38" width="3" height="12" fill={INK} />
+      <path d="M 18 50 L 14 60 L 22 60 Z" fill={KHAKI} stroke={INK} strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M 30 38 L 30 28 L 38 24 L 38 38" fill={accent} stroke={INK} strokeWidth="1.6" strokeLinejoin="round" />
+      <line x1="32" y1="30" x2="36" y2="28" stroke={INK} strokeWidth="0.8" />
+      <line x1="32" y1="34" x2="36" y2="32" stroke={INK} strokeWidth="0.8" />
+    </svg>
+  );
+}
+
 // ═══ Catalog metadata ═══
 
 export type IconEntry = {
@@ -779,6 +1135,38 @@ export const SECTIONS: IconSection[] = [
       { Comp: IconCrown,    name: "おうかん", romaji: "crown" },
       { Comp: IconRibbon,   name: "リボン",   romaji: "ribbon" },
       { Comp: IconBalloon,  name: "ふうせん", romaji: "balloon" },
+    ],
+  },
+  {
+    title: "さむらい",
+    subtitle: "Samurai era",
+    items: [
+      { Comp: IconKabuto,   name: "かぶと",       romaji: "kabuto" },
+      { Comp: IconKatana,   name: "かたな",       romaji: "katana" },
+      { Comp: IconShuriken, name: "しゅりけん",   romaji: "shuriken" },
+      { Comp: IconSensu,    name: "せんす",       romaji: "sensu" },
+      { Comp: IconMon,      name: "かもん",       romaji: "mon" },
+      { Comp: IconYumi,     name: "ゆみや",       romaji: "yumi" },
+      { Comp: IconCastle,   name: "おしろ",       romaji: "castle" },
+      { Comp: IconHinawa,   name: "ひなわじゅう", romaji: "hinawa" },
+      { Comp: IconTaiko,    name: "たいこ",       romaji: "taiko" },
+      { Comp: IconNobori,   name: "のぼりばた",   romaji: "nobori" },
+    ],
+  },
+  {
+    title: "せんそう",
+    subtitle: "Modern warfare",
+    items: [
+      { Comp: IconTank,    name: "せんしゃ",       romaji: "tank" },
+      { Comp: IconJet,     name: "せんとうき",     romaji: "jet" },
+      { Comp: IconMissile, name: "ミサイル",       romaji: "missile" },
+      { Comp: IconHelmet,  name: "ヘルメット",     romaji: "helmet" },
+      { Comp: IconGasmask, name: "ガスマスク",     romaji: "gasmask" },
+      { Comp: IconGrenade, name: "しゅりゅうだん", romaji: "grenade" },
+      { Comp: IconBoom,    name: "ばくはつ",       romaji: "boom" },
+      { Comp: IconBarbed,  name: "ゆうしてっせん", romaji: "barbed" },
+      { Comp: IconRadio,   name: "むせんき",       romaji: "radio" },
+      { Comp: IconMG,      name: "きかんじゅう",   romaji: "mg" },
     ],
   },
 ];
