@@ -24,7 +24,7 @@ function Tag({ children, bg = PALETTE.cream }: { children: React.ReactNode; bg?:
 
 export default function IconsPage() {
   return (
-    <main style={{ maxWidth: 1280, margin: "0 auto", padding: "48px 40px 80px" }}>
+    <main style={{ maxWidth: 1280, margin: "0 auto", padding: "clamp(28px, 5vw, 48px) clamp(16px, 4vw, 40px) 80px" }}>
       <header
         style={{
           marginBottom: 36,
@@ -39,7 +39,7 @@ export default function IconsPage() {
           <Tag>♡ ICONS · もりもり {ALL.length} ♡</Tag>
           <h1
             style={{
-              fontSize: 56,
+              fontSize: "clamp(34px, 6.5vw, 56px)",
               fontWeight: 900,
               letterSpacing: -1.6,
               lineHeight: 1.05,
@@ -85,7 +85,7 @@ export default function IconsPage() {
         >
           ☆ ALL {ALL.length} ☆
         </span>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: 10, alignItems: "center" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(48px, 1fr))", gap: 10, alignItems: "center" }}>
           {ALL.map(({ Comp, romaji }) => (
             <div key={romaji} style={{ display: "flex", justifyContent: "center" }}>
               <Comp size={44} />
@@ -97,12 +97,12 @@ export default function IconsPage() {
       {SECTIONS.map((section) => (
         <section key={section.title} style={{ marginBottom: 36 }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 14 }}>
-            <h2 style={{ fontSize: 24, fontWeight: 900, letterSpacing: -0.5, margin: 0 }}>{section.title}</h2>
+            <h2 style={{ fontSize: "clamp(20px, 4vw, 24px)", fontWeight: 900, letterSpacing: -0.5, margin: 0 }}>{section.title}</h2>
             <span style={{ fontSize: 11, fontFamily: FONTS.mono, color: PALETTE.inkDim, letterSpacing: 1 }}>
               {section.subtitle} · {section.items.length}
             </span>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 12 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12 }}>
             {section.items.map(({ Comp, name, romaji }) => (
               <div
                 key={romaji}

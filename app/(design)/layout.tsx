@@ -14,6 +14,7 @@ export default function DesignLayout({
         minHeight: "100vh",
         backgroundImage: `radial-gradient(${PALETTE.coral}30 1.5px, transparent 1.5px)`,
         backgroundSize: "22px 22px",
+        overflowX: "hidden",
       }}
     >
       {children}

@@ -145,9 +145,9 @@ function Playground() {
         border: `2.5px solid ${PALETTE.ink}`,
         borderRadius: 18,
         boxShadow: `4px 4px 0 ${PALETTE.ink}`,
-        padding: 24,
+        padding: "clamp(16px, 3vw, 24px)",
         display: "grid",
-        gridTemplateColumns: "320px 1fr",
+        gridTemplateColumns: "repeat(auto-fit, minmax(min(280px, 100%), 1fr))",
         gap: 24,
         alignItems: "stretch",
       }}
@@ -181,7 +181,7 @@ function Playground() {
           <div style={{ fontSize: 11, fontFamily: FONTS.mono, color: PALETTE.inkDim, letterSpacing: 1.5, marginBottom: 8 }}>
             CHARACTER
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: 6 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(48px, 1fr))", gap: 6 }}>
             {FAMILY.map((c, i) => (
               <button
                 key={c.romaji}
@@ -309,7 +309,7 @@ const PAGE_SAMPLES: { Comp: Mascot["Comp"]; page: string; text: string }[] = [
 
 export default function MascotsPage() {
   return (
-    <main style={{ maxWidth: 1280, margin: "0 auto", padding: "48px 40px 80px" }}>
+    <main style={{ maxWidth: 1280, margin: "0 auto", padding: "clamp(28px, 5vw, 48px) clamp(16px, 4vw, 40px) 80px" }}>
       <header
         style={{
           marginBottom: 36,
@@ -324,7 +324,7 @@ export default function MascotsPage() {
           <Tag>☁ MASCOT FAMILY ☁</Tag>
           <h1
             style={{
-              fontSize: 56,
+              fontSize: "clamp(34px, 6.5vw, 56px)",
               fontWeight: 900,
               letterSpacing: -1.6,
               lineHeight: 1.05,
@@ -401,7 +401,7 @@ export default function MascotsPage() {
         >
           ♡ ROLL CALL ♡
         </span>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: 12, alignItems: "end" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(80px, 1fr))", gap: 12, alignItems: "end" }}>
           {FAMILY.map(({ Comp, name }) => (
             <div key={name} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
               <Comp size={92} />
@@ -411,7 +411,7 @@ export default function MascotsPage() {
         </div>
       </section>
 
-      <section style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+      <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(280px, 100%), 1fr))", gap: 20 }}>
         {FAMILY.map((c) => (
           <Card key={c.name} {...c} />
         ))}
@@ -419,10 +419,10 @@ export default function MascotsPage() {
 
       <section style={{ marginTop: 56 }}>
         <Tag>USAGE</Tag>
-        <h2 style={{ fontSize: 28, fontWeight: 900, letterSpacing: -0.5, margin: "10px 0 24px" }}>
+        <h2 style={{ fontSize: "clamp(22px, 4vw, 28px)", fontWeight: 900, letterSpacing: -0.5, margin: "10px 0 24px" }}>
           つかいどころ サンプル
         </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(320px, 100%), 1fr))", gap: 18 }}>
           <div
             style={{
               background: "#fff",
@@ -521,7 +521,7 @@ export default function MascotsPage() {
 
       <section style={{ marginTop: 64 }}>
         <Tag bg={PALETTE.lilac}>♡ EXPRESSIONS ♡</Tag>
-        <h2 style={{ fontSize: 32, fontWeight: 900, letterSpacing: -0.8, margin: "10px 0 6px" }}>
+        <h2 style={{ fontSize: "clamp(24px, 4.5vw, 32px)", fontWeight: 900, letterSpacing: -0.8, margin: "10px 0 6px" }}>
           きもち、いろいろ。
         </h2>
         <p style={{ fontSize: 13, color: PALETTE.inkDim, margin: "0 0 24px", maxWidth: 640, lineHeight: 1.7 }}>
@@ -610,7 +610,7 @@ export default function MascotsPage() {
 
       <section style={{ marginTop: 64 }}>
         <Tag bg={PALETTE.mint}>★ TRY IT ★</Tag>
-        <h2 style={{ fontSize: 32, fontWeight: 900, letterSpacing: -0.8, margin: "10px 0 24px" }}>
+        <h2 style={{ fontSize: "clamp(24px, 4.5vw, 32px)", fontWeight: 900, letterSpacing: -0.8, margin: "10px 0 24px" }}>
           ためしてみる
         </h2>
         <Playground />
