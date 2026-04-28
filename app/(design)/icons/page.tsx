@@ -1,0 +1,162 @@
+import { PALETTE, FONTS } from "@/lib/mochi";
+import { SECTIONS } from "@/components/icons-full";
+
+const ALL = SECTIONS.flatMap((s) => s.items);
+
+function Tag({ children, bg = PALETTE.cream }: { children: React.ReactNode; bg?: string }) {
+  return (
+    <span
+      style={{
+        display: "inline-block",
+        padding: "3px 10px",
+        background: bg,
+        border: `2px solid ${PALETTE.ink}`,
+        borderRadius: 8,
+        fontSize: 10,
+        fontWeight: 900,
+        letterSpacing: 1.5,
+      }}
+    >
+      {children}
+    </span>
+  );
+}
+
+export default function IconsPage() {
+  return (
+    <main style={{ maxWidth: 1280, margin: "0 auto", padding: "48px 40px 80px" }}>
+      <header
+        style={{
+          marginBottom: 36,
+          display: "flex",
+          alignItems: "flex-end",
+          justifyContent: "space-between",
+          gap: 16,
+          flexWrap: "wrap",
+        }}
+      >
+        <div>
+          <Tag>♡ ICONS · もりもり {ALL.length} ♡</Tag>
+          <h1
+            style={{
+              fontSize: 56,
+              fontWeight: 900,
+              letterSpacing: -1.6,
+              lineHeight: 1.05,
+              margin: "12px 0 8px",
+            }}
+          >
+            ぽんこつべやの
+            <br />
+            <span style={{ background: `linear-gradient(180deg, transparent 60%, ${PALETTE.coral}80 60%)` }}>
+              アイコンしゅう。
+            </span>
+          </h1>
+          <p style={{ fontSize: 14, color: PALETTE.inkDim, lineHeight: 1.8, maxWidth: 640, margin: 0 }}>
+            マスコットと同じ流儀で {ALL.length} 種類。6つのカテゴリ（はいしん・おしゃべり・おうち・たべもの・てんき・UI）。
+          </p>
+        </div>
+      </header>
+
+      <section
+        style={{
+          background: "#fff",
+          border: `3px solid ${PALETTE.ink}`,
+          borderRadius: 22,
+          boxShadow: `5px 5px 0 ${PALETTE.ink}`,
+          padding: "24px 22px",
+          marginBottom: 44,
+          position: "relative",
+        }}
+      >
+        <span
+          style={{
+            position: "absolute",
+            top: -14,
+            left: 22,
+            background: PALETTE.cream,
+            padding: "4px 12px",
+            border: `2.5px solid ${PALETTE.ink}`,
+            borderRadius: 10,
+            fontSize: 11,
+            fontWeight: 900,
+            letterSpacing: 2,
+          }}
+        >
+          ☆ ALL {ALL.length} ☆
+        </span>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: 10, alignItems: "center" }}>
+          {ALL.map(({ Comp, romaji }) => (
+            <div key={romaji} style={{ display: "flex", justifyContent: "center" }}>
+              <Comp size={44} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {SECTIONS.map((section) => (
+        <section key={section.title} style={{ marginBottom: 36 }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 14 }}>
+            <h2 style={{ fontSize: 24, fontWeight: 900, letterSpacing: -0.5, margin: 0 }}>{section.title}</h2>
+            <span style={{ fontSize: 11, fontFamily: FONTS.mono, color: PALETTE.inkDim, letterSpacing: 1 }}>
+              {section.subtitle} · {section.items.length}
+            </span>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 12 }}>
+            {section.items.map(({ Comp, name, romaji }) => (
+              <div
+                key={romaji}
+                style={{
+                  background: "#fff",
+                  border: `2px solid ${PALETTE.ink}`,
+                  borderRadius: 14,
+                  boxShadow: `2px 2px 0 ${PALETTE.ink}`,
+                  padding: 12,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                }}
+              >
+                <div
+                  style={{
+                    background: PALETTE.bg,
+                    border: `1.5px solid ${PALETTE.ink}`,
+                    borderRadius: 10,
+                    padding: "14px 8px",
+                    display: "flex",
+                    justifyContent: "center",
+                    backgroundImage: `radial-gradient(${PALETTE.coral}30 1px, transparent 1px)`,
+                    backgroundSize: "12px 12px",
+                  }}
+                >
+                  <Comp size={72} />
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+                  <span style={{ fontSize: 13, fontWeight: 900 }}>{name}</span>
+                  <span style={{ fontSize: 9, fontFamily: FONTS.mono, color: PALETTE.inkDim }}>{romaji}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <p
+        style={{
+          marginTop: 50,
+          fontSize: 12,
+          color: PALETTE.inkDim,
+          lineHeight: 1.8,
+          padding: "14px 16px",
+          background: "#fffaf3",
+          border: `1.5px dashed ${PALETTE.inkSoft}`,
+          borderRadius: 10,
+        }}
+      >
+        <strong style={{ color: PALETTE.ink }}>つかいかた:</strong> 各アイコンは{" "}
+        <code style={{ fontFamily: FONTS.mono }}>{`<IconController size={24} accent="#a6d4bf" />`}</code> のように
+        size と accent を受け取ります。
+      </p>
+    </main>
+  );
+}
