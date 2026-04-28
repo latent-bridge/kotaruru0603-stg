@@ -1,7 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import { PALETTE, FONTS } from "@/lib/mochi";
 import { SECTIONS } from "@/components/icons-full";
 
 const ALL = SECTIONS.flatMap((s) => s.items);
+
+const COLOR_OPTIONS = [
+  { key: "coral",  label: "こーらる", hex: PALETTE.coral },
+  { key: "accent", label: "あこうてん", hex: PALETTE.accent },
+  { key: "mint",   label: "みんと",   hex: PALETTE.mint },
+  { key: "lilac",  label: "らいらく", hex: PALETTE.lilac },
+  { key: "cream",  label: "くりーむ", hex: PALETTE.cream },
+  { key: "ink",    label: "ものくろ", hex: PALETTE.ink },
+  { key: "plum",   label: "すもも",   hex: "#8a4f5e" },
+  { key: "sky",    label: "そら",     hex: "#7fb8d6" },
+  { key: "butter", label: "ばたー",   hex: "#f4c46a" },
+  { key: "sage",   label: "せーじ",   hex: "#8fb091" },
+];
 
 function Tag({ children, bg = PALETTE.cream }: { children: React.ReactNode; bg?: string }) {
   return (
@@ -23,6 +39,8 @@ function Tag({ children, bg = PALETTE.cream }: { children: React.ReactNode; bg?:
 }
 
 export default function IconsPage() {
+  const [accent, setAccent] = useState<string>(PALETTE.coral);
+
   return (
     <main style={{ maxWidth: 1280, margin: "0 auto", padding: "clamp(28px, 5vw, 48px) clamp(16px, 4vw, 40px) 80px" }}>
       <header
@@ -61,6 +79,81 @@ export default function IconsPage() {
       <section
         style={{
           background: "#fff",
+          border: `2.5px solid ${PALETTE.ink}`,
+          borderRadius: 16,
+          boxShadow: `3px 3px 0 ${PALETTE.ink}`,
+          padding: "16px 18px",
+          marginBottom: 32,
+          display: "flex",
+          alignItems: "center",
+          gap: 16,
+          flexWrap: "wrap",
+        }}
+      >
+        <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <span style={{ fontSize: 10, fontFamily: FONTS.mono, color: PALETTE.inkDim, letterSpacing: 2 }}>
+            COLOR
+          </span>
+          <span style={{ fontSize: 14, fontWeight: 900 }}>カラーバリエーション</span>
+        </div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", flex: 1 }}>
+          {COLOR_OPTIONS.map((opt) => {
+            const active = accent === opt.hex;
+            return (
+              <button
+                key={opt.key}
+                onClick={() => setAccent(opt.hex)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                  padding: "6px 12px 6px 6px",
+                  background: active ? PALETTE.ink : "#fff",
+                  color: active ? "#fff" : PALETTE.ink,
+                  border: `2px solid ${PALETTE.ink}`,
+                  borderRadius: 999,
+                  boxShadow: active ? `2px 2px 0 ${opt.hex}` : "none",
+                  fontFamily: FONTS.body,
+                  fontSize: 12,
+                  fontWeight: 900,
+                  cursor: "pointer",
+                  transition: "all 0.12s",
+                }}
+              >
+                <span
+                  style={{
+                    width: 22,
+                    height: 22,
+                    borderRadius: 999,
+                    background: opt.hex,
+                    border: `1.5px solid ${active ? "#fff" : PALETTE.ink}`,
+                    flexShrink: 0,
+                  }}
+                />
+                {opt.label}
+              </button>
+            );
+          })}
+        </div>
+        <div
+          style={{
+            fontSize: 10,
+            fontFamily: FONTS.mono,
+            color: PALETTE.inkDim,
+            letterSpacing: 1,
+            padding: "4px 10px",
+            background: PALETTE.bg,
+            border: `1.5px dashed ${PALETTE.inkDim}`,
+            borderRadius: 6,
+          }}
+        >
+          accent=&quot;{accent}&quot;
+        </div>
+      </section>
+
+      <section
+        style={{
+          background: "#fff",
           border: `3px solid ${PALETTE.ink}`,
           borderRadius: 22,
           boxShadow: `5px 5px 0 ${PALETTE.ink}`,
@@ -88,7 +181,7 @@ export default function IconsPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(48px, 1fr))", gap: 10, alignItems: "center" }}>
           {ALL.map(({ Comp, romaji }) => (
             <div key={romaji} style={{ display: "flex", justifyContent: "center" }}>
-              <Comp size={44} />
+              <Comp size={44} accent={accent} />
             </div>
           ))}
         </div>
@@ -129,7 +222,7 @@ export default function IconsPage() {
                     backgroundSize: "12px 12px",
                   }}
                 >
-                  <Comp size={72} />
+                  <Comp size={72} accent={accent} />
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
                   <span style={{ fontSize: 13, fontWeight: 900 }}>{name}</span>

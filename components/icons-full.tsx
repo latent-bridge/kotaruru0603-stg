@@ -681,6 +681,60 @@ export function IconBalloon({ size = 60, accent = PALETTE.coral }: IconProps) {
   );
 }
 
+/* ============== EXTRA (gestures) ============== */
+
+export function IconHandshake({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 6 46 L 22 38 L 30 44 L 14 52 Z"
+            fill={accent} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M 74 46 L 58 38 L 50 44 L 66 52 Z"
+            fill="#fff" stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M 26 40 Q 32 34 40 36 Q 48 34 54 40 Q 56 46 50 50 L 30 50 Q 24 46 26 40 Z"
+            fill="#ffd9c2" stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M 32 42 L 32 48 M 38 41 L 38 49 M 44 41 L 44 49"
+            stroke={INK} strokeWidth="1.1" strokeLinecap="round" />
+      <path d="M 40 18 L 41.5 23 L 46 24 L 41.5 25 L 40 30 L 38.5 25 L 34 24 L 38.5 23 Z"
+            fill={accent} stroke={INK} strokeWidth="1.2" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconFish({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <path d="M 12 40 Q 26 22 50 22 Q 60 22 64 32 Q 60 42 50 58 Q 26 58 12 40 Z"
+            fill={accent} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <path d="M 12 40 L 4 28 L 6 40 L 4 52 Z"
+            fill={accent} stroke={INK} strokeWidth="2" strokeLinejoin="round" />
+      <path d="M 36 24 L 40 14 L 46 24 Z"
+            fill="#fff" stroke={INK} strokeWidth="1.6" strokeLinejoin="round" />
+      <path d="M 32 50 L 36 58 L 40 50 Z"
+            fill="#fff" stroke={INK} strokeWidth="1.4" strokeLinejoin="round" />
+      <path d="M 26 32 Q 22 40 26 48" fill="none" stroke={INK} strokeWidth="1.4" strokeLinecap="round" />
+      <circle cx="52" cy="34" r="3" fill="#fff" stroke={INK} strokeWidth="1.4" />
+      <circle cx="52.5" cy="34" r="1.4" fill={INK} />
+      <circle cx="68" cy="22" r="2" fill="none" stroke={INK} strokeWidth="1.2" />
+      <circle cx="74" cy="16" r="1.4" fill="none" stroke={INK} strokeWidth="1.1" />
+    </svg>
+  );
+}
+
+export function IconBow({ size = 60, accent = PALETTE.coral }: IconProps) {
+  return (
+    <svg {..._S(size)}>
+      <circle cx="34" cy="34" r="11" fill="#ffd9c2" stroke={INK} strokeWidth="2.2" />
+      <path d="M 23 32 Q 28 22 38 24 Q 44 26 44 34 L 23 34 Z"
+            fill={INK} stroke={INK} strokeWidth="1.4" strokeLinejoin="round" />
+      <path d="M 30 36 Q 32 38 34 36" fill="none" stroke={INK} strokeWidth="1.4" strokeLinecap="round" />
+      <path d="M 30 44 Q 22 52 24 64 L 64 64 Q 64 56 56 50 L 44 44 Z"
+            fill={accent} stroke={INK} strokeWidth="2.2" strokeLinejoin="round" />
+      <path d="M 44 46 Q 56 50 58 60" fill="none" stroke={INK} strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M 16 26 L 22 28 M 14 34 L 20 34" stroke={INK} strokeWidth="1.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 /* ============== さむらい ============== */
 
 const KHAKI = "#9ba98a";
@@ -1080,8 +1134,9 @@ export const SECTIONS: IconSection[] = [
       { Comp: IconPin,    name: "ピン",     romaji: "pin" },
       { Comp: IconTag,    name: "タグ",     romaji: "tag" },
       { Comp: IconCamera, name: "カメラ",   romaji: "camera" },
-      { Comp: IconLink,   name: "リンク",   romaji: "link" },
-      { Comp: IconShare,  name: "シェア",   romaji: "share" },
+      { Comp: IconLink,      name: "リンク",   romaji: "link" },
+      { Comp: IconShare,     name: "シェア",   romaji: "share" },
+      { Comp: IconHandshake, name: "こらぼ",   romaji: "handshake" },
     ],
   },
   {
@@ -1121,6 +1176,7 @@ export const SECTIONS: IconSection[] = [
       { Comp: IconFlower,  name: "おはな",   romaji: "flower" },
       { Comp: IconLeaf,    name: "はっぱ",   romaji: "leaf" },
       { Comp: IconSparkle, name: "きらきら", romaji: "sparkle" },
+      { Comp: IconFish,    name: "おさかな", romaji: "fish" },
     ],
   },
   {
@@ -1135,6 +1191,7 @@ export const SECTIONS: IconSection[] = [
       { Comp: IconCrown,    name: "おうかん", romaji: "crown" },
       { Comp: IconRibbon,   name: "リボン",   romaji: "ribbon" },
       { Comp: IconBalloon,  name: "ふうせん", romaji: "balloon" },
+      { Comp: IconBow,      name: "おじぎ",   romaji: "bow" },
     ],
   },
   {
